@@ -35,7 +35,7 @@ std::vector<std::tuple<long int, long int, long int>> test_function(int disc_lim
     returnVector.push_back(disc_run);
     }   
   } 
- catch (const char* msg) { cerr << msg << endl; }
+ catch (const char* msg) { std::cerr << msg << endl; }
  return returnVector;
 }
 
@@ -45,5 +45,5 @@ unsigned int input;
 cout  << "Enter your maximum disc size: \n";
 cin >> input;
 
-for(auto& tuple: test_function(input)) {cout << "(" << std::get<0>(tuple) << ", " << std::get<1>(tuple) << ", " << std::get<2>(tuple) << ")\n";}	
+for(auto& tuple: test_function(input)) {std::cout << "(" << std::get<0>(tuple) << ", " << std::get<1>(tuple) << ", " << std::get<2>(tuple) << ")\n";}	
 }
