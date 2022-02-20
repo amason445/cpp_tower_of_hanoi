@@ -45,9 +45,11 @@ std::vector<std::tuple<int, long long int, long long int>> test_function(int dis
 
 int main() {
 
-unsigned int input;	
-std::cout  << "Enter your maximum disc amount between 0 and 62: \n";
-std::cin >> input;
+ unsigned int input;	
+ std::cout  << "Enter your maximum disc amount between 0 and 62: \n";
+ std::cin >> input;
 
-for(auto& tuple: test_function(input)) {std::cout << "(" << std::get<0>(tuple) << ", " << std::get<1>(tuple) << ", " << std::get<2>(tuple) << ")\n";}	
+ for(auto& tuple: test_function(input)) {
+  std::cout << "(" << std::get<0>(tuple) << ", " << std::get<1>(tuple) << ", " << std::get<2>(tuple) << ")\n";
+ }	
 }
