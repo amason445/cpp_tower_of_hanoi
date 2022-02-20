@@ -42,8 +42,8 @@ std::vector<std::tuple<long int, long int, long int>> test_function(int disc_lim
 int main() {
 
 unsigned int input;	
-cout  << "Enter your maximum disc size: \n";
-cin >> input;
+std::cout  << "Enter your maximum disc size: \n";
+std::cin >> input;
 
 for(auto& tuple: test_function(input)) {std::cout << "(" << std::get<0>(tuple) << ", " << std::get<1>(tuple) << ", " << std::get<2>(tuple) << ")\n";}	
 }
