@@ -18,3 +18,6 @@ T(n) = 2(T(n-1)) + 1, for n > 0;
 T(n) = 2^n - 1;
 ```
 
+Notes:
+1. The program cannot take any inputs lower than zero, as that would imply no discs exist
+2. The program cannot safely take any inputs larger than 62, as that would exceed the storage capacity of a 64-bit system
