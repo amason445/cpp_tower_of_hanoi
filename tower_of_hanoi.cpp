@@ -6,7 +6,7 @@
 using namespace std;
 
 //contains two solutions and a test function for Knuth's Tower of Hanoi Problem
-int RecursiveSolution(int n_discs) {
+long int RecursiveSolution(int n_discs) {
   if (n_discs < 0) { 
    throw "Number of Discs must be greater than or equal to zero"; 
   }
@@ -19,7 +19,7 @@ int RecursiveSolution(int n_discs) {
 }
 
 //uses std::pow()
-int ClosedFormSolution(int n_discs) {
+long int ClosedFormSolution(int n_discs) {
   if (n_discs < 0) {
    throw "Number of Discs must be greather than or equal to zero";
   }
@@ -29,11 +29,11 @@ int ClosedFormSolution(int n_discs) {
 }
 
 //test function
-vector<tuple<int, int, int>> test_function(int disc_limit) {  
-  vector<tuple<int, int, int>> returnVector;
+vector<tuple<long int, long int, long int>> test_function(int disc_limit) {  
+  vector<tuple<long int, long int, long int>> returnVector;
   try {	 
    for(int i = 0; i <= disc_limit; i++) {
-    tuple<int, int, int> disc_run = make_tuple(i, RecursiveSolution(i), ClosedFormSolution(i));
+    tuple<long int, long int, long int> disc_run = make_tuple(i, RecursiveSolution(i), ClosedFormSolution(i));
     returnVector.push_back(disc_run);
     }   
   } 
@@ -42,5 +42,10 @@ vector<tuple<int, int, int>> test_function(int disc_limit) {
 }
 
 int main() {
- for(auto& tuple: test_function(14)) {cout << "(" << get<0>(tuple) << ", " << get<1>(tuple) << ", " << get<2>(tuple) << ")\n";}	
+
+unsigned int input;	
+cout  << "Enter your maximum disc size: \n";
+cin >> input;
+
+for(auto& tuple: test_function(input)) {cout << "(" << get<0>(tuple) << ", " << get<1>(tuple) << ", " << get<2>(tuple) << ")\n";}	
 }
