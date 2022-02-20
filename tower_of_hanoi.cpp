@@ -35,7 +35,7 @@ std::vector<std::tuple<long int, long int, long int>> test_function(int disc_lim
     returnVector.push_back(disc_run);
     }   
   } 
- catch (const char* msg) { std::cerr << msg << endl; }
+ catch (const char* msg) { std::cerr << msg << std::endl; }
  return returnVector;
 }
 
