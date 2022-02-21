@@ -20,4 +20,5 @@ T(n) = 2^n - 1;
 
 Notes:
 1. The program cannot take any inputs lower than zero, as that would imply no discs exist
-2. The program cannot safely take any inputs larger than 62, as that would exceed the storage capacity of a 64-bit system
+2. The program cannot safely take any inputs larger than 64, as that would exceed the storage capacity of a 64-bit system
+3. Exception errors have been revised so that any inputs exceeding the cap will return an error message in cerror
