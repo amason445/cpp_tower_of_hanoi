@@ -8,7 +8,7 @@ Rules:
 2. You must never move a larger onto a smaller
 
 There are two solutions to this problem:
-1. Recurrence Solution, which takes the form of a recursive solution:
+1. Recursive Solution, which takes the form of a recurrence:
 ``` 
 T(0) = 0;
 T(n) = 2(T(n-1)) + 1, for n > 0;
